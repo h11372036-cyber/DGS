@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpa Feirão 2026 | Protocolo de Liquidação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;600;900&display=swap');
+        
+        :root {
+            --carbon-black: #050507;
+            --electric-orchid: #d946ef;
+            --deep-purple: #701a75;
+            --glass-white: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--carbon-black);
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Fundo Dinâmico Carbono */
+        .carbon-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(217, 70, 239, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(112, 26, 117, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Painel "Force Shield" */
+        .shield-panel {
+            background: var(--glass-white);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(217, 70, 239, 0.1);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .shield-panel::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--electric-orchid), transparent);
+            animation: moveLine 3s infinite linear;
+        }
+
+        @keyframes moveLine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Botão "Hyper-Link" */
+        .btn-orchid {
+            background: linear-gradient(135deg, var(--electric-orchid), var(--deep-purple));
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 0.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-orchid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(217, 70, 239, 0.4);
+            filter: brightness(1.2);
+        }
+
+        .text-neon {
+            color: var(--electric-orchid);
+            text-shadow: 0 0 10px rgba(217, 70, 239, 0.5);
+        }
+
+        .data-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #6b7280;
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <div class="carbon-bg"></div>
+
+    <!-- Header de Monitorização -->
+    <header class="p-6 lg:p-12 flex justify-between items-center max-w-7xl mx-auto w-full relative z-10">
+        <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-zinc-900 border border-orchid-500/30 flex items-center justify-center rounded-lg rotate-45 group hover:rotate-90 transition-transform duration-500">
+                <svg class="w-6 h-6 text-fuchsia-500 -rotate-45 group-hover:-rotate-90 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="font-black text-2xl tracking-tighter uppercase italic">Limpa<span class="text-fuchsia-500">Feirão</span></h2>
+                <span class="data-label">Global Access Protocol 2026</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 bg-zinc-900/50 p-2 px-4 rounded-lg border border-white/5">
+            <div class="flex flex-col items-end">
+                <span class="data-label text-[8px]">Estado da Rede</span>
+                <span class="text-emerald-500 text-[10px] font-bold">ENCRIPTADO</span>
+            </div>
+            <div class="w-2 h-8 bg-zinc-800 rounded-full overflow-hidden">
+                <div class="w-full h-1/2 bg-fuchsia-500 animate-pulse"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Core -->
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-4xl w-full">
+            <div class="shield-panel p-8 md:p-20 relative">
+                
+                <!-- Background Grid Decor -->
+                <div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                <div class="relative z-10 text-center">
+                    <div class="inline-block mb-10 px-4 py-1 border border-fuchsia-500/20 bg-fuchsia-500/5 rounded text-fuchsia-400 font-mono text-[10px] tracking-widest uppercase">
+                        Sistema de Liquidação Ativo
+                    </div>
+
+                    <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-none uppercase italic">
+                        REINICIE O SEU <br> 
+                        <span class="text-neon">PERFIL DE CRÉDITO</span>
+                    </h1>
+
+                    <p class="text-zinc-400 text-lg md:text-xl mb-12 max-w-xl mx-auto font-light tracking-wide">
+                        Aceda ao motor de renegociação automatizada e obtenha perdão de débitos através do protocolo oficial 2026.
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="max-w-xs mx-auto mb-16">
+                        <a href="http://iniciolimppfeirao.shop/inicio/" 
+                           class="btn-orchid w-full py-6 flex items-center justify-center gap-4 no-underline shadow-2xl">
+                            <span>Consultar Agora</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                        <p class="mt-4 data-label !text-[8px]">ID-Consulta: 8829-XPL-2026</p>
+                    </div>
+
+                    <!-- Tech Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-white/5">
+                        <div class="text-left md:text-center">
+                            <span class="data-label">Desconto</span>
+                            <p class="text-2xl font-bold text-white">99%<span class="text-fuchsia-500">MAX</span></p>
+                        </div>
+                        <div class="text-left md:text-center">
+                            <span class="data-label">Velocidade</span>
+                            <p class="text-2xl font-bold text-white">EM TEMPO REAL</p>
+                        </div>
+                        <div class="text-left md:text-center">
+                            <span class="data-label">Consulta</span>
+                            <p class="text-2xl font-bold text-fuchsia-500 italic">SEGURA</p>
+                        </div>
+                        <div class="text-left md:text-center">
+                            <span class="data-label">Região</span>
+                            <p class="text-2xl font-bold text-white">NACIONAL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Terminal -->
+    <footer class="p-10 border-t border-white/5 bg-[#08080a]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex items-center gap-8">
+                <div class="flex flex-col">
+                    <span class="data-label">Arquitetura do Sistema</span>
+                    <span class="text-[10px] font-bold text-zinc-500 uppercase">© 2026 Limpa Feirão Ops</span>
+                </div>
+                <div class="flex gap-2">
+                    <div class="w-1 h-6 bg-fuchsia-900"></div>
+                    <div class="w-1 h-6 bg-fuchsia-700"></div>
+                    <div class="w-1 h-6 bg-fuchsia-500"></div>
+                </div>
+            </div>
+            
+            <nav class="flex flex-wrap justify-center gap-10">
+                <a href="#" class="data-label hover:text-fuchsia-500 transition-colors">Infraestrutura</a>
+                <a href="#" class="data-label hover:text-fuchsia-500 transition-colors">Termos Legais</a>
+                <a href="#" class="data-label hover:text-fuchsia-500 transition-colors">Segurança de Consulta</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
